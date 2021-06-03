@@ -7,6 +7,9 @@ The club has various board games. But the games are just neglected When there's 
 this website is made to solve the following problems.
 
 To eliminate the waste of unused board games.
+
 To help the club finance through the rental business.
+
 to increase club's recognition.
+
 Fulfills people's need to enjoy board games.
