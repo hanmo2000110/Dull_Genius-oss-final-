@@ -16,3 +16,6 @@ To help the club finance through the rental business.
 to increase club's recognition.
 
 Fulfills people's need to enjoy board games.
+
+
+https://colorlib.com/wp/template/css-table-15/
