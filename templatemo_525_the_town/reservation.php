@@ -11,10 +11,6 @@
     <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/templatemo-style.css" />
-    <!--
-	The Town
-	https://templatemo.com/tm-525-the-town
-	-->
   </head>
   <body>    
     <!-- Hero section -->
@@ -74,11 +70,43 @@
             </br>
             </br>
             </br>
-            </br>
+            <table style="width:100%">
+              <tr>
+                <th>Check Box</th>
+                <th>Board game</th>
+                <th>Number of players</th>
+                <th>State</th>
+                <th>how to play</th>
+              </tr>
+              <?php>
+                $conn = mysqli_connect(
+                          'localhost',
+                          'root',
+                          'Name0413',
+                          'BoardGames'
+                        );
+                
+                $sql = "SELECT * FROM topic";
+                $result = mysqli_query($conn, $sql);
+
+                while($row = mysqli_fetch_array($result)) {
+                  // document.write('<tr>');
+                  // document.write('<th><input type="checkbox" name="'+f+'" value="'+f+'" ></th>');
+                  echo $row['title'];
+                  // document.write('<th>' + $row['num_of_players'] + '</th>');
+                  // document.write('<th>' + $row['price'] + '</th>');
+                  // document.write('<th>' + $row['status'] + '</th>');
+                  // document.write('</tr>');
+                }
+              
+              ?>
+              
+            </table>
+            </br> 
             </br>
             </br>
             <p>
-              이름: <input type="text" name="name"  size=40><br>
+               이름: <input type="text" name="name"  size=40 ><br>
             </br>
               학번: <input type="text" name="stdid" size=40><br>
             <p>
@@ -86,17 +114,18 @@
             </br>
             </br>
             </br>
+            
             </br>
             </br>
             </br>
             </br>
-            <a href="" class="tm-intro-text tm-btn-primary">return</a>
+            <a href="index.html" class="tm-intro-text tm-btn-primary">return</a>
+            &nbsp;
             <a href="" class="tm-intro-text tm-btn-primary">submit</a>
             </br>
             </br>
             </br>
             </br>
-              
           </div>            
         </div>
         <div class="row">
@@ -305,3 +334,67 @@
     </script>
   </body>
 </html>
+
+
+
+<!-- 
+  CREATE TABLE `BoardGames` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+    `title` varchar(100) NOT NULL,
+    `num_of_players` varchar(5) NOT NULL,
+    `price` int(4) NOT NULL,
+    `status` varchar(20) NOT NULL,
+    PRIMARY KEY (id)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+  보드게임 이름	인원	대여비(1일 단위)	상태
+
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('The Great Dalmuti','4~8', 1000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Halli Galli','2~6', 1000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Tofu  kingdom','3~8', 1200, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Saboteur','3~10', 1200, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('6 Nimmt!','2~10', 1200, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Resistance Avalon','5~10', 1500, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Kakerlakenpoker Royal','2~6', 1600, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Uno','2~10', 1500, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('SKULL KING','2~6', 1600, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('The Genius: Horror Race','3~12', 2000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Rummikub Classic','2~4', 2000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('BANG!','4~7', 2000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Splendor','2~4', 2000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Citadels 2018','2~8', 2000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('CLUE','3~6', 2500, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Concept','4~12', 3000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Camel Up','2~8', 3900, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Inkognito','3~4', 3900, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('I am the Boss!','3~6', 4000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Puerto Rico','2~5', 4000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Mysterium','2~7', 4000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Die Siedler von Catan','3~4', 4000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('A Game of Thrones: The Board Game','3~6', 4000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Scythe','1~5', 4000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Decrypto','4~8', 3000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Secret Hitler','5~10', 3000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Unlock','1~5', 3500, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('SURVIVE','2~4', 3000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('BANG! Samurai Sword','2~7', 2000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Escape Room','2~5', 4000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Concerto Grosso (Korean edition)','2~8', 2000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Pandemic','2~6', 3000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Sheriff of NOTTINGHAM','4', 3000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Tichu','4', 1000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('One Night Ultimate Werewolf','4~10', 3000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Davinchi Code','2~4', 2000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('trump card','2~7', 1000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('The Quacks of Quedlinburg','2~4', 2000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Azul','2~4', 2000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Las Vegas','6', 3000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('SpyFall','3~8', 3000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('YOGI','3~10', 3000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Blitz!','6', 2000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('Dobble','2~8', 2000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('no thanks','3~7', 2000, 'not borrowed');
+  INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('agricola','2~4', 2000, 'not borrowed');
+
+
+-->
