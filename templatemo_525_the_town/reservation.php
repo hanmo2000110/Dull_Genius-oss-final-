@@ -129,7 +129,7 @@
                     </br>
                     </br>
                     <p>
-                        이름: <input type="text" name="name" size=40><br>
+                        이름: <input type="text" name="name_of_borrower" size=40><br>
                         </br>
                         학번: <input type="text" name="stdid" size=40><br>
                         <p>
@@ -363,7 +363,6 @@
     </script>
     <script>
     function test() {
-      console.log("ok");
         var obj_length = document.getElementsByName("checked").length;
         var n = 0;
         for (var i=0; i<obj_length; i++) {
@@ -372,14 +371,20 @@
             }
         }
         if(n > 3) alert("Please choose less than 3 board games");
-        else alert("Please choose more than 3 board games");
-        // {
-        //   for (var i=0; i<obj_length; i++) {
-        //     if (document.getElementsByName("checked")[i].checked == true) {
-                
-        //     }
-        //   }
-        // }
+        else {
+          for (var i=0; i<obj_length; i++) {
+            if (document.getElementsByName("checked")[i].checked == true) {
+                <?php
+                  $sql = "SELECT * FROM BoardGames WHERE id=$i";
+                  $result = mysqli_query($conn, $sql);
+                  $row = mysqli_fetch_array($result);
+
+                  $sql = "INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES(name_of_borrower,stdid,$row[1] , NOW() )"; 
+                  $result = mysqli_query($conn, $sql);
+                ?>
+            }
+          }
+        }
     }
 </script>
 </body>
