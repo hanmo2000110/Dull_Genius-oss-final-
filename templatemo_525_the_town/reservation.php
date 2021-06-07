@@ -72,8 +72,25 @@
                     </br>
                     </br>
                     </br>
-
-                    <table style="width:100%" border="1" bordercolor="blue" width="500" height="300" align="center">
+                    <style>
+  table {
+    width: 100%;
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+  }
+  th, td {
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+    text-align: center;
+  }
+  th {
+    background-color: #bbdefb;
+  }
+  td {
+    background-color: #e3f2fd;
+  }
+</style>
+                    <table style="width:100%" border="1" bordercolor="gray" width="500" height="300" align="center">
                         <tr bgcolor="blue" align="center">
                         <tr>
                             <th>Check Box</th>
