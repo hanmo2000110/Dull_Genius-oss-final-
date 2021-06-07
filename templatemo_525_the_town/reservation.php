@@ -74,39 +74,48 @@
                     </br>
 
                     <table class="responstable">
-                        <tr>
-                            <th>Check Box</th>
-                            <th data-th="Driver details"><span>number</span></th>
-                            <th>Board game</th>
-                            <th>Number of players</th>
-                            <th>price</th>
-                            <th>State</th>
-                        </tr>
-
-                        <?php
-		$conn = mysqli_connect(
- 		 'localhost',
-  	 	 'admin',
- 		 'Name0413',
-		 'Dull_Genius');
-		  $sql = "SELECT * FROM BoardGames";
-	       	  $result = mysqli_query($conn, $sql);
-		  $i = 1;
-		  while( $row = mysqli_fetch_array($result) ){
-			echo '<tr>';
-			echo '<td><input type="checkbox" name="checked" value="$i"></td>';
-			echo '<td>'.$i.'</td>';
-			echo '<td>'.$row['title'].'</td>';
-			echo '<td>'.$row['num_of_players'].'</td>';
-			echo '<td>'.$row['price'].'</td>';
-			echo '<td>'.$row['status'].'</td>';
-			echo '</tr>';
-			$i++;
-		  }
-
-	  ?>
-
-                    </table>
+  
+  <tr>
+    <th>Main driver</th>
+    <th data-th="Driver details"><span>First name</span></th>
+    <th>Surname</th>
+    <th>Date of birth</th>
+    <th>Relationship</th>
+  </tr>
+  
+  <tr>
+    <td><input type="radio"/></td>
+    <td>Steve</td>
+    <td>Foo</td>
+    <td>01/01/1978</td>
+    <td>Policyholder</td>
+  </tr>
+  
+  <tr>
+    <td><input type="radio"/></td>
+    <td>Steffie</td>
+    <td>Foo</td>
+    <td>01/01/1978</td>
+    <td>Spouse</td>
+  </tr>
+  
+  <tr>
+    <td><input type="radio"/></td>
+    <td>Stan</td>
+    <td>Foo</td>
+    <td>01/01/1994</td>
+    <td>Son</td>
+  </tr>
+  
+  <tr>
+    <td><input type="radio"/></td>
+    <td>Stella</td>
+    <td>Foo</td>
+    <td>01/01/1992</td>
+    <td>kim</td>
+  </tr>
+  
+</table>
 
 
 
