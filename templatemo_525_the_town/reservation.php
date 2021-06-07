@@ -144,7 +144,7 @@
                             </br>
                             <a href="index.php" class="tm-intro-text tm-btn-primary">return</a>
                             &nbsp;
-                            <button type="button" onlick="test()"  class="tm-intro-text tm-btn-primary">submit</a>
+                            <button type="button" onlick="test()" >submit</a>
                             </br>
                             </br>
                             </br>
@@ -366,14 +366,14 @@
         var obj_length = document.getElementsByName("checked").length;
         var n = 0;
         for (var i=0; i<obj_length; i++) {
-            if (document.getElementsByName("fruit")[i].checked == true) {
+            if (document.getElementsByName("checked")[i].checked == true) {
                 n++;
             }
         }
         if(n>3) alert("Please choose less than 3 board games");
         else {
           for (var i=0; i<obj_length; i++) {
-            if (document.getElementsByName("fruit")[i].checked == true) {
+            if (document.getElementsByName("checked")[i].checked == true) {
                 
             }
         }
