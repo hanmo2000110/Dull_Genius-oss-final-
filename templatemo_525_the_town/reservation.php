@@ -70,27 +70,41 @@
             </br>
             </br>
             </br>
-            <table style="width:100%">
+            <table style="width:100%" border="1" bordercolor="blue" width ="500" height="300" align = "center" >
+    <tr bgcolor="blue" align ="center">
               <tr>
-                <th>Check Box</th>
+		<th>Check Box</th>
+		<th>number </th>
                 <th>Board game</th>
-                <th>Number of players</th>
+		<th>Number of players</th>
+		<th>price </th>
                 <th>State</th>
-                <th>how to play</th>
-              </tr>
-              <script>
+	      </tr>
+        
+		<?php
+		$conn = mysqli_connect(
+ 		 'localhost',
+  	 	 'admin',
+ 		 'Name0413',
+		 'Dull_Genius');
+		  $sql = "SELECT * FROM BoardGames";
+	       	  $result = mysqli_query($conn, $sql);
+		  $i = 1;
+		  while( $row = mysqli_fetch_array($result) ){
+			echo '<tr>';
+			echo '<th><input type="checkbox" name="checked" value="$i"></th>';
+			echo '<th>'.$i.'</th>';
+			echo '<th>'.$row['title'].'</th>';
+			echo '<th>'.$row['num_of_players'].'</th>';
+			echo '<th>'.$row['price'].'</th>';
+			echo '<th>'.$row['status'].'</th>';
+			echo '</tr>';
+			$i++;
+		  }
 
-                for(var f=0 ; f<3 ; f++ ) {
-                  document.write('<tr>');
-                  document.write('<th><input type="checkbox" name="'+f+'" value="'+f+'" ></th>');
-                  document.write('<th>'  + f + '</th>');
-                  document.write('<th>' + f + '</th>');
-                  document.write('<th>' + f + '</th>');
-                  document.write('<th>' + f + '</th>');
-                  document.write('</tr>');
-                }
-              
-                </script>
+	          ?>
+                 
+                
               
             </table>
             </br> 
