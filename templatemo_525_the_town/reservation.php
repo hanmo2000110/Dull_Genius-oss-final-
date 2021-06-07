@@ -363,6 +363,7 @@
     </script>
     <script>
     function test() {
+      console.log("ok");
         var obj_length = document.getElementsByName("checked").length;
         var n = 0;
         for (var i=0; i<obj_length; i++) {
