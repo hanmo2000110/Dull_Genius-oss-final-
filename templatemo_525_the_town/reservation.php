@@ -144,7 +144,7 @@
                             </br>
                             <a href="index.html" class="tm-intro-text tm-btn-primary">return</a>
                             &nbsp;
-                            <a onlick="test()"  class="tm-intro-text tm-btn-primary">submit</a>
+                            <button type="button" onlick="test()"  class="tm-intro-text tm-btn-primary">submit</a>
                             </br>
                             </br>
                             </br>
