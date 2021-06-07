@@ -70,8 +70,6 @@
                         <strong>5. Enjoy the game.</br> </strong>
                     </p>
                     </br>
-                    </br>
-                    </br>
                     <style>
   table {
     width: 100%;
@@ -146,7 +144,7 @@
                             </br>
                             <a href="index.html" class="tm-intro-text tm-btn-primary">return</a>
                             &nbsp;
-                            <a href="" class="tm-intro-text tm-btn-primary">submit</a>
+                            <a onlick="test()"  class="tm-intro-text tm-btn-primary">submit</a>
                             </br>
                             </br>
                             </br>
@@ -363,6 +361,25 @@
             });
         });
     </script>
+    <script>
+    function test() {
+        var obj_length = document.getElementsByName("checked").length;
+        var n = 0;
+        for (var i=0; i<obj_length; i++) {
+            if (document.getElementsByName("fruit")[i].checked == true) {
+                n++;
+            }
+        }
+        if(n>3) alert("Please choose less than 3 board games");
+        else {
+          for (var i=0; i<obj_length; i++) {
+            if (document.getElementsByName("fruit")[i].checked == true) {
+                
+            }
+        }
+        }
+    }
+</script>
 </body>
 
 </html>
