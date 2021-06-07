@@ -384,6 +384,7 @@
                 ?>
             }
           }
+          location.reload();
         }
     }
 </script>
