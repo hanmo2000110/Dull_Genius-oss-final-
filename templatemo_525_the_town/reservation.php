@@ -142,7 +142,7 @@
                             </br>
                             </br>
                             </br>
-                            <a href="index.html" class="tm-intro-text tm-btn-primary">return</a>
+                            <a href="index.php" class="tm-intro-text tm-btn-primary">return</a>
                             &nbsp;
                             <button type="button" onlick="test()"  class="tm-intro-text tm-btn-primary">submit</a>
                             </br>
