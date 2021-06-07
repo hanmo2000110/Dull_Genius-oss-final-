@@ -370,14 +370,15 @@
                 n++;
             }
         }
-        if(n>3) alert("Please choose less than 3 board games");
-        else {
-          for (var i=0; i<obj_length; i++) {
-            if (document.getElementsByName("checked")[i].checked == true) {
+        if(n > 3) alert("Please choose less than 3 board games");
+        else alert("Please choose more than 3 board games");
+        // {
+        //   for (var i=0; i<obj_length; i++) {
+        //     if (document.getElementsByName("checked")[i].checked == true) {
                 
-            }
-        }
-        }
+        //     }
+        //   }
+        // }
     }
 </script>
 </body>
