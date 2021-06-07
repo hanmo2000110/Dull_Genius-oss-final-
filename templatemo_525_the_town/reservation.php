@@ -375,7 +375,7 @@
           for (var i=0; i<obj_length; i++) {
             if (document.getElementsByName("checked")[i].checked == true) {
                 <?php
-                  $sql = "SELECT * FROM BoardGames WHERE id=$i";
+                  $sql = "SELECT * FROM BoardGames WHERE id=($i+1)";
                   $result = mysqli_query($conn, $sql);
                   $row = mysqli_fetch_array($result);
 
