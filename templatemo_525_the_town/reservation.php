@@ -112,12 +112,12 @@
 		  $i = 1;
 		  while( $row = mysqli_fetch_array($result) ){
 			echo '<tr>';
-			echo '<th><input type="checkbox" name="checked" value="$i"></th>';
-			echo '<th>'.$i.'</th>';
-			echo '<th>'.$row['title'].'</th>';
-			echo '<th>'.$row['num_of_players'].'</th>';
-			echo '<th>'.$row['price'].'</th>';
-			echo '<th>'.$row['status'].'</th>';
+			echo '<td><input type="checkbox" name="checked" value="$i"></th>';
+			echo '<td>'.$i.'</th>';
+			echo '<td>'.$row['title'].'</td>';
+			echo '<td>'.$row['num_of_players'].'</td>';
+			echo '<td>'.$row['price'].'</td>';
+			echo '<td>'.$row['status'].'</td>';
 			echo '</tr>';
 			$i++;
 		  }
