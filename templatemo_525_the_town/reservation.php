@@ -381,8 +381,8 @@
                     var_dump($row);
                     $stmt = $conn.prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES(?,?,?, NOW() )"); 
                     $stmt.bind_param("sss", $borrower, $studentId, $title);
-                    $firstname = "borrower";
-                    $lastname = "studentId";
+                    $borrower = "borrower";
+                    $studentId = "studentId";
                     $title = $row['title'];
                     $stmt.execute();
                 ?>
