@@ -378,7 +378,7 @@
                   $sql = "SELECT * FROM BoardGames WHERE id=$i";
                   $result = mysqli_query($conn, $sql);
                   $row = mysqli_fetch_array($result);
-                  
+                  var_dump($row);
                   $sql = "INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES('name_of_borrower','stdid',${row[1]} , NOW() )"; 
                   $result = mysqli_query($conn, $sql);
                 ?>
