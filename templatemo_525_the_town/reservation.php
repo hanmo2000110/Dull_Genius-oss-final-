@@ -378,9 +378,9 @@
                   $sql = "SELECT * FROM BoardGames WHERE id=".mysql_real_escape_string($i);
                   $result = mysqli_query($conn, $sql);
                   $row = mysqli_fetch_array($result);
-
-                  $sql = "INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES(".$name_of_borrower.','.$stdid.','.row[1]." ," .NOW()." )"; 
-                  $result = mysqli_query($conn, $sql);
+                  echo "<h1>".$row['title']."<h1>";
+                //   $sql = "INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES(".$name_of_borrower.','.$stdid.','.$row[1]." ," .NOW()." )"; 
+                //   $result = mysqli_query($conn, $sql);
                 ?>
             }
           }
