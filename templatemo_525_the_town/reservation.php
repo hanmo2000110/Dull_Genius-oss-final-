@@ -377,7 +377,7 @@
                 <?php
                     $mysqli = new mysqli("localhost", "admin", "Name0413", "Dull_Genius");
                     $sql = "SELECT * FROM BoardGames WHERE id=$i";
-                    $result = $mysqli->query($conn, $sql);
+                    $result = $mysqli->query($sql);
                     $row = mysqli_fetch_array($result);
                     
                     $stmt = $mysqli->prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES(?,?,?, NOW() )"); 
