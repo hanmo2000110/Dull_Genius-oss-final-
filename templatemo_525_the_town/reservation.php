@@ -372,14 +372,14 @@
         }
         if(n > 3) alert("Please choose less than 3 board games");
         else {
-          for (var i=0; i<obj_length; i++) {
-            if (document.getElementsByName("checked")[i].checked == true) {
+          for (var i=1; i<=obj_length; i++) {
+            if (document.getElementsByName("checked")[i-1].checked == true) {
                 <?php
-                  $sql = "SELECT * FROM BoardGames WHERE id=($i+1)";
+                  $sql = "SELECT * FROM BoardGames WHERE id=$i";
                   $result = mysqli_query($conn, $sql);
                   $row = mysqli_fetch_array($result);
 
-                  $sql = "INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES('$name_of_borrower','$stdid',$row[1] , NOW() )"; 
+                  $sql = "INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES($name_of_borrower,$stdid,row[1] , NOW() )"; 
                   $result = mysqli_query($conn, $sql);
                 ?>
             }
