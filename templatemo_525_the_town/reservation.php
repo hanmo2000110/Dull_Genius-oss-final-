@@ -123,17 +123,8 @@
                             echo "</br>";
                             echo "</br>";
                             echo "</br>";
-                            echo "<p>이름: <input type=\"text\" name=\"name_of_borrower\" size=40><br></br>학번: <input type=\"text\" name=\"stdid\" size=40><br><p>";
-                            
-                            echo "</br>";
-                            echo "</br>";
-                            echo "</br>";
-                            echo "</br>";
-                            echo "</br>";
-                            echo "</br>";
-                            echo "</br>";
-                            echo "</br>";
-                            echo "</br>";
+                            echo "<p>이름: <input type=\"text\" name=\"name_of_borrower\" size=40><br></br>학번: <input type=\"text\" name=\"stdid\" size=40><br><p>"; 
+                            echo "</br>"; 
                             echo "<a href=\"index.php\" class=\"tm-intro-text tm-btn-primary\">return</a>";
                             echo "&nbsp;";
                             echo "<button type=\"button\" onclick=\"test()\" >submit</button>";
@@ -368,19 +359,19 @@
         else {
           for (var i=1; i<=obj_length; i++) {
             if (document.getElementsByName("checked")[i-1].checked == true) {
-                <?php
-                    $mysqli = new mysqli("localhost", "admin", "Name0413", "Dull_Genius");
-                    $sql = "SELECT * FROM BoardGames WHERE id=$i";
-                    $result = $mysqli->query($sql);
-                    $row = mysqli_fetch_array($result);
+                // <?php
+                //     $mysqli = new mysqli("localhost", "admin", "Name0413", "Dull_Genius");
+                //     $sql = "SELECT * FROM BoardGames WHERE id=$i";
+                //     $result = $mysqli->query($sql);
+                //     $row = mysqli_fetch_array($result);
                     
-                    $stmt = $mysqli->prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES(?,?,?, NOW() )"); 
-                    $stmt.bind_param("sss", $borrower, $studentId, $title);
-                    $borrower = "borrower";
-                    $studentId = "studentId";
-                    $title = $row['title'];
-                    $stmt->execute();
-                ?>
+                //     $stmt = $mysqli->prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES(?,?,?, NOW() )"); 
+                //     $stmt.bind_param("sss", $borrower, $studentId, $title);
+                //     $borrower = "borrower";
+                //     $studentId = "studentId";
+                //     $title = $row['title'];
+                //     $stmt->execute();
+                // ?>
             }
           }
           location.reload();
