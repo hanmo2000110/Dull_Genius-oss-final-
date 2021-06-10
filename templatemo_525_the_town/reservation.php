@@ -144,7 +144,7 @@
                             </br>
                             <a href="index.php" class="tm-intro-text tm-btn-primary">return</a>
                             &nbsp;
-                            <input type="submit" onclick="test()" >submit</button>
+                            <button type="button" onclick="test()" >submit</button>
                             </br>
                             </br>
                             </br>
@@ -379,7 +379,7 @@
                   $result = mysqli_query($conn, $sql);
                   $row = mysqli_fetch_array($result);
 
-                  $sql = "INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES('$name_of_borrower','$stdid',row[1] , NOW() )"; 
+                  $sql = "INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES(".$name_of_borrower.','.$stdid.','.row[1]." ," .NOW()." )"; 
                   $result = mysqli_query($conn, $sql);
                 ?>
             }
