@@ -375,16 +375,17 @@
           for (var i=1; i<=obj_length; i++) {
             if (document.getElementsByName("checked")[i-1].checked == true) {
                 <?php
+                    $mysqli = new mysqli("localhost", "admin", "Name0413", "Dull_Genius");
                     $sql = "SELECT * FROM BoardGames WHERE id=$i";
-                    $result = mysqli_query($conn, $sql);
+                    $result = $mysqli->query($conn, $sql);
                     $row = mysqli_fetch_array($result);
-                    var_dump($row);
-                    $stmt = $conn.prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES(?,?,?, NOW() )"); 
+                    
+                    $stmt = $mysqli->prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES(?,?,?, NOW() )"); 
                     $stmt.bind_param("sss", $borrower, $studentId, $title);
                     $borrower = "borrower";
                     $studentId = "studentId";
                     $title = $row['title'];
-                    $stmt.execute();
+                    $stmt->execute();
                 ?>
             }
           }
