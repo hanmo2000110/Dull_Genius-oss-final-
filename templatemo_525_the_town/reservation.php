@@ -379,12 +379,12 @@
                     $result = mysqli_query($conn, $sql);
                     $row = mysqli_fetch_array($result);
                     var_dump($row);
-                    $stmt = $conn->prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES(?,?,?, NOW() )"); 
-                    $stmt->bind_param("sss", $borrower, $studentId, $title);
+                    $stmt = $conn.prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES(?,?,?, NOW() )"); 
+                    $stmt.bind_param("sss", $borrower, $studentId, $title);
                     $firstname = "borrower";
                     $lastname = "studentId";
                     $title = $row['title'];
-                    $stmt->execute();
+                    $stmt.execute();
                 ?>
             }
           }
