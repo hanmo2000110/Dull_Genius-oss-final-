@@ -144,7 +144,7 @@
                             </br>
                             <a href="index.php" class="tm-intro-text tm-btn-primary">return</a>
                             &nbsp;
-                            <button type="button" onclick="test()" >submit</button>
+                            <input type="submit" onclick="test()" >submit</button>
                             </br>
                             </br>
                             </br>
