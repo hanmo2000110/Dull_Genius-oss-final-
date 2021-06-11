@@ -117,8 +117,12 @@
                             echo "<p>please don't choose more than three boardgames.</p>";
                         }
                     ?>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
                     <a href="index.php" class="tm-intro-text tm-btn-primary">main page</a>
-                    <a href="reservation.php" class="tm-intro-text tm-btn-primary">reservation page</a>
+                    <a href="reservation.php" class="tm-intro-text tm-btn-primary">return</a>
                     </br>
                     </br>
                     </form>
