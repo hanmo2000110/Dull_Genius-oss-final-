@@ -13,13 +13,14 @@
     }
     
     // prepare and bind
-    $stmt = $conn->prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES (?, ?, ?, NOW() )");
-    $stmt->bind_param("sss", $borrower, $studentId, $boardgameborrowed);
+    $stmt = $conn->prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES (?, ?, ?, ?,NOW() )");
+    $stmt->bind_param("ssss", $borrower, $studentId, $boardgameborrowed, $phone);
     
     // set parameters and execute
     $borrower = $_GET['name_of_borrower'];
     $studentId = $_GET['stdid'];
     $name = $_GET['checked'];
+    $phone = $_GET['phonenumber'];
 
     $n = 0;
     foreach ($name as $board){ 
@@ -108,6 +109,7 @@
                             $name = $_GET['checked'];
                             echo "Name : ".$_GET['name_of_borrower']."<br>";
                             echo "Student ID : ".$_GET['stdid']."<br>";
+                            echo "Phone Number : ".$_GET['phonenumber']."<br>";
                             $num = 1;
                             foreach ($name as $board){ 
                                 echo $num.". ".$board."<br />";
