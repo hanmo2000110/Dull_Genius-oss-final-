@@ -17,10 +17,8 @@
     $stmt->bind_param("ssss", $borrower, $studentId, $boardgameborrowed, $phone);
     $sql = $conn->prepare("UPDATE BoardGames SET status = 'reserved' WHERE title =?");
     $sql->bind_param("s",$boardgameborrowed);
-    $sqlquery = $conn->prepare( "SELECT * FROM BoardGames WHERE title=? ");
-    $sqlquery->bind_param("s",$boardgameborrowed);
 
-
+    
 
     // set parameters and execute
     $borrower = $_GET['name_of_borrower'];
@@ -39,8 +37,11 @@
             $boardgameborrowed = $board;
             $stmt->execute();
             $sql->execute();
-            $result = $sqlquery->execute();
+
+            $sqlquery = "SELECT * FROM BoardGames WHERE title=".$board."' ";
+            $result = mysqli_query($conn, $sqlquery);
             $row = mysqli_fetch_array($result);
+
             $fee = $fee + $row['price'];
         }
 
