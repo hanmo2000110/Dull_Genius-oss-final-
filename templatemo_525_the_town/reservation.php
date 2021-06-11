@@ -88,6 +88,7 @@
                             background-color: #e3f2fd;
                         }
                     </style>
+                    <form action="insert.php" method="get">
                     <table style="width:100%" border="1" bordercolor="gray" width="500" height="300" align="center">
                         <tr bgcolor="blue" align="center">
                         <tr>
@@ -123,17 +124,22 @@
                             echo "</br>";
                             echo "</br>";
                             echo "</br>";
-                            echo "<p>이름: <input type=\"text\" name=\"name_of_borrower\" size=40><br></br>학번: <input type=\"text\" name=\"stdid\" size=40><br><p>"; 
-                            echo "</br>"; 
-                            echo "<a href=\"index.php\" class=\"tm-intro-text tm-btn-primary\">return</a>";
-                            echo "&nbsp;";
-                            echo "<button type=\"button\" onclick=\"test()\" >submit</button>";
-                            echo "</br>";
-                            echo "</br>";
-                            echo "</br>";
-                            echo "</br>";
-                            echo "</br>";
+                            
                         ?>
+                        <p>
+                            이름: <input type="text" name="name_of_borrower" size=40 placeholder="Enter your name here">
+                            <br>
+                            </br>
+                            학번: <input type=text name=stdid size=40 placeholder="Enter your student ID here">
+                            <br>
+                        <p>
+                        </br>
+                        <a href="index.php" class="tm-intro-text tm-btn-primary">return</a>
+                        &nbsp;
+                        <input type="submit" value="Submit">
+                        </br>
+                        </br>
+                    </form>
                 </div>
             </div>
             <div class="row">
@@ -375,6 +381,12 @@
                     }
                 ]
             });
+        });
+        var limit = 3;
+        $('input.single-checkbox').on('change', function(evt) {
+            if($(this).siblings(':checked').length >= limit) {
+                this.checked = false;
+            }
         });
     </script>
 
