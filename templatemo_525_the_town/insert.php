@@ -15,26 +15,35 @@
     // prepare and bind
     $stmt = $conn->prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, PhoneNumber, reservationAt) VALUES (?, ?, ?, ?, NOW() )");
     $stmt->bind_param("ssss", $borrower, $studentId, $boardgameborrowed, $phone);
-    
+    $sql = $conn->prepare("UPDATE BoardGames SET status = 'reserved' WHERE title =?");
+    $sql->bind_param("s",$boardgameborrowed);
+    $sqlquery = $conn->prepare( "SELECT * FROM BoardGames WHERE title=? ");
+    $sqlquery->bind_param("s",$boardgameborrowed);
+
+
+
     // set parameters and execute
     $borrower = $_GET['name_of_borrower'];
     $studentId = $_GET['stdid'];
     $name = $_GET['checked'];
     $phone = $_GET['phonenumber'];
 
-    $sql = $conn->prepare("UPDATE BoardGames SET status = 'reserved' WHERE title =?");
-    $sql->bind_param("s",$nofboard);
     $n = 0;
+    
     foreach ($name as $board){ 
         $n++;
     }
     if($n < 4){
+        $fee = 0;
         foreach ($name as $board){ 
             $boardgameborrowed = $board;
-            $nofboard = $board;
             $stmt->execute();
             $sql->execute();
+            $result = $sqlquery->execute();
+            $row = mysqli_fetch_array($result);
+            $fee += $row['price'];
         }
+
     }
 
 ?>
@@ -114,6 +123,7 @@
                             echo "Name : ".$_GET['name_of_borrower']."<br>";
                             echo "Student ID : ".$_GET['stdid']."<br>";
                             echo "Phone Number : ".$_GET['phonenumber']."<br>";
+                            echo "The Fee : ".$fee."<br>";
                             $num = 1;
                             foreach ($name as $board){ 
                                 echo $num.". ".$board."<br />";
