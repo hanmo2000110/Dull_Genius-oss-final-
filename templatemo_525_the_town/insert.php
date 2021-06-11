@@ -41,7 +41,7 @@
             $sql->execute();
             $result = $sqlquery->execute();
             $row = mysqli_fetch_array($result);
-            $fee += $row['price'];
+            $fee = $fee + $row['price'];
         }
 
     }
