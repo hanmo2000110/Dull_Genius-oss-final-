@@ -22,8 +22,8 @@
     $name = $_GET['checked'];
     $phone = $_GET['phonenumber'];
 
-    //$sql = $conn->prepare();
-
+    $sql = $conn->prepare("UPDATE reservation SET status = 'reserved' WHERE title =' ? ' ");
+    $sql->bind_param("s",$nofboard);
     $n = 0;
     foreach ($name as $board){ 
         $n++;
@@ -31,9 +31,9 @@
     if($n < 4){
         foreach ($name as $board){ 
             $boardgameborrowed = $board;
+            $nofboard = $board;
             $stmt->execute();
-            mysqli_query($conn, "UPDATE reservation SET status = 'reserved' WHERE title = ".$boardgameborrowed."\"");
-
+            $sql->execute();
         }
     }
 
