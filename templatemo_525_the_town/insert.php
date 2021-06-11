@@ -13,7 +13,7 @@
     }
     
     // prepare and bind
-    $stmt = $conn->prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES (?, ?, ?, ?,NOW() )");
+    $stmt = $conn->prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, PhoneNumber, reservationAt) VALUES (?, ?, ?, ?,NOW() )");
     $stmt->bind_param("ssss", $borrower, $studentId, $boardgameborrowed, $phone);
     
     // set parameters and execute
