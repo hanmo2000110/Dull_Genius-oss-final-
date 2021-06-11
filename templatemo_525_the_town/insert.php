@@ -21,6 +21,6 @@ $borrower = $_GET['borrower'];
 $studentId = $_GET['studentId'];
 $boardgameborrowed = $_GET['studentId'];
 $stmt->execute();
-
+echo "is okey";
 
 ?>
