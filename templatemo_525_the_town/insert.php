@@ -28,6 +28,7 @@
     foreach ($name as $board){ 
         $n++;
     }
+    echo "OK";
     if($n < 4){
         foreach ($name as $board){ 
             $boardgameborrowed = $board;
