@@ -32,7 +32,7 @@
         $n++;
     }
     if($n < 4){
-        $fee = 0;
+        $fee = 1234;
         foreach ($name as $board){ 
             $boardgameborrowed = $board;
             $stmt->execute();
@@ -124,7 +124,7 @@
                             echo "Name : ".$_GET['name_of_borrower']."<br>";
                             echo "Student ID : ".$_GET['stdid']."<br>";
                             echo "Phone Number : ".$_GET['phonenumber']."<br>";
-                            echo "The Fee : ".$row[0]."<br>";
+                            echo "The Fee : ".$fee."<br>";
                             $num = 1;
                             foreach ($name as $board){ 
                                 echo $num.". ".$board."<br />";
