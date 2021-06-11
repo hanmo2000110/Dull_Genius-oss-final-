@@ -102,8 +102,8 @@
                     
                     <?php
                         if($n < 4){
-                            echo "<h2 class="tm-text-primary tm-section-title mb-4"><strong>reservation is succesfully done. </strong></h2>";
-                            echo "<p class="mx-auto tm-work-description">";
+                            echo "<h2 class=\"tm-text-primary tm-section-title mb-4\"><strong>reservation is succesfully done. </strong></h2>";
+                            echo "<p class=\"mx-auto tm-work-description\">";
                             echo "</br>";
                             $name = $_GET['checked'];
                             
@@ -112,7 +112,8 @@
                             }
                         }
                         else { 
-                            echo "<h2 class="tm-text-primary tm-section-title mb-4"><strong>reservation is failed.</strong></h2>";
+                            echo "<h2 class=\"tm-text-primary tm-section-title mb-4\"><strong>reservation is failed.</strong></h2>";
+                            echo "<p class=\"mx-auto tm-work-description\">";
                             echo "<p>please don't choose more than three boardgames.</p>";
                         }
                     ?>
