@@ -106,9 +106,12 @@
                             echo "<p class=\"mx-auto tm-work-description\">";
                             echo "</br>";
                             $name = $_GET['checked'];
-                            
-                            foreach ($name as $color){ 
-                                echo $color."<br />";
+                            echo "Name : ".$_GET['name_of_borrower'];
+                            echo "Student ID : ".$_GET['stdid'];
+                            $num = 1;
+                            foreach ($name as $board){ 
+                                echo $num.". ".$board."<br />";
+                                $num++;
                             }
                         }
                         else { 
