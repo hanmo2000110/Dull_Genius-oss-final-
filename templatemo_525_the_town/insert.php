@@ -13,7 +13,7 @@
     }
     
     // prepare and bind
-    $stmt = $conn->prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, PhoneNumber, reservationAt) VALUES (?, ?, ?, ?,NOW() )");
+    $stmt = $conn->prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, PhoneNumber, reservationAt) VALUES (?, ?, ?, ?, NOW() )");
     $stmt->bind_param("ssss", $borrower, $studentId, $boardgameborrowed, $phone);
     
     // set parameters and execute
@@ -21,6 +21,8 @@
     $studentId = $_GET['stdid'];
     $name = $_GET['checked'];
     $phone = $_GET['phonenumber'];
+
+    $sql = "UPDATE reservation SET status = reserved WHERE tile = ''";
 
     $n = 0;
     foreach ($name as $board){ 
@@ -30,6 +32,8 @@
         foreach ($name as $board){ 
             $boardgameborrowed = $board;
             $stmt->execute();
+            mysqli_query($conn, "UPDATE reservation SET status = reserved WHERE tile = '".$board."'");
+
         }
     }
 
