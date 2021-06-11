@@ -112,7 +112,11 @@
                             $i = 1;
                             while( $row = mysqli_fetch_array($result) ){
                                 echo '<tr>';
-                                echo '<td><input type="checkbox" name="checked[]" id="checked" value="'.$row['title'].'"></th>';
+                                if($row['status'] == 'reserved'){
+                                    echo '<td>'.$row['status'].'</td>';
+                                }
+                                else
+                                    echo '<td><input type="checkbox" name="checked[]" id="checked" value="'.$row['title'].'"></th>';
                                 echo '<td>'.$i.'</th>';
                                 echo '<td>'.$row['title'].'</td>';
                                 echo '<td>'.$row['num_of_players'].'</td>';
