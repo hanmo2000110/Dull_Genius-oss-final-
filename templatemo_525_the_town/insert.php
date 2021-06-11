@@ -96,13 +96,15 @@
         <div class="container tm-container-gallery">
             <div class="row">
                 <div class="text-center col-12">
-                    <h2 class="tm-text-primary tm-section-title mb-4"><strong>renting rules </strong></h2>
-                    <p class="mx-auto tm-work-description">
+                    
+                    
                     </br>
                     
                     <?php
                         if($n < 4){
-                            echo "reservation is succesfully done.";
+                            echo "<h2 class="tm-text-primary tm-section-title mb-4"><strong>reservation is succesfully done. </strong></h2>";
+                            echo "<p class="mx-auto tm-work-description">";
+                            echo "</br>";
                             $name = $_GET['checked'];
                             
                             foreach ($name as $color){ 
@@ -110,11 +112,12 @@
                             }
                         }
                         else { 
-                            echo "<p>reservation is failed</p>";
+                            echo "<h2 class="tm-text-primary tm-section-title mb-4"><strong>reservation is failed.</strong></h2>";
                             echo "<p>please don't choose more than three boardgames.</p>";
                         }
                     ?>
-
+                    <a href="index.php" class="tm-intro-text tm-btn-primary">main page</a>
+                    <a href="reservation.php" class="tm-intro-text tm-btn-primary">reservation page</a>
                     </br>
                     </br>
                     </form>
