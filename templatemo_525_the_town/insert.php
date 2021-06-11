@@ -91,6 +91,16 @@ echo $_GET['borrower'];
                     <p class="mx-auto tm-work-description">
                     </br>
                     insertion is succesfully done.
+                    <?php
+
+                    $name = $_GET['checked'];
+                    
+                    foreach ($name as $color){ 
+                        echo $color."<br />";
+                    }
+                    
+                    
+                    ?>
                     </br>
                     </br>
                     </form>
