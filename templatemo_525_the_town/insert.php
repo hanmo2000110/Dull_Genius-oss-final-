@@ -22,7 +22,7 @@
     $name = $_GET['checked'];
     $phone = $_GET['phonenumber'];
 
-    $sql = $conn->prepare("UPDATE reservation SET status = 'reserved' WHERE title =(?) ");
+    $sql = $conn->prepare("UPDATE reservation SET status = 'reserved' WHERE title =? ");
     $sql->bind_param("s",$nofboard);
     $n = 0;
     foreach ($name as $board){ 
