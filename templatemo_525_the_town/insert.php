@@ -13,15 +13,14 @@ if ($conn->connect_error) {
 }
  
 // prepare and bind
-$stmt = $conn->prepare("INSERT INTO BoardGames (title, num_of_players, price, status) VALUES('The Great Dalmuti','4~8', 1000, 'not borrowed')");
-// INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES (?, ?, ?, NOW() )
-// $stmt->bind_param("sss", $borrower, $studentId, $boardgameborrowed);
+$stmt = $conn->prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES (?, ?, ?, NOW() )");
+$stmt->bind_param("sss", $borrower, $studentId, $boardgameborrowed);
  
 // set parameters and execute
-// $borrower = $_GET['borrower'];
-// $studentId = $_GET['studentId'];
-// $boardgameborrowed = $_GET['studentId'];
+$borrower = $_GET['borrower'];
+$studentId = $_GET['studentId'];
+$boardgameborrowed = $_GET['studentId'];
 $stmt->execute();
-echo "is okey";
+echo $_GET['borrower'];
 
 ?>
