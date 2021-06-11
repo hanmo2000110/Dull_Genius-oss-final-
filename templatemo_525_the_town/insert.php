@@ -22,8 +22,9 @@
     $name = $_GET['checked'];
     $phone = $_GET['phonenumber'];
     echo "OK1";
-    $sql = $conn->prepare("UPDATE reservation SET status = ? WHERE title =?");
-    $sql->bind_param("Ss",$reserve ,$nofboard);
+    $state = "UPDATE reservation SET status = ? WHERE title =?";
+    $sql = $conn->prepare($state);
+    $sql->bind_param("ss",$reserve ,$nofboard);
     $n = 0;
     echo "OK2";
     $reserve = "reserved";
