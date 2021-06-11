@@ -22,7 +22,7 @@
     $name = $_GET['checked'];
     $phone = $_GET['phonenumber'];
 
-    $sql = "UPDATE reservation SET status = reserved WHERE tile = ''";
+    //$sql = $conn->prepare();
 
     $n = 0;
     foreach ($name as $board){ 
@@ -32,7 +32,7 @@
         foreach ($name as $board){ 
             $boardgameborrowed = $board;
             $stmt->execute();
-            mysqli_query($conn, "UPDATE reservation SET status = reserved WHERE tile = '".$board."'");
+            mysqli_query($conn, "UPDATE reservation SET status = reserved WHERE title = '".$board."'");
 
         }
     }
