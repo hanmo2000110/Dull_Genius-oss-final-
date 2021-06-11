@@ -32,13 +32,13 @@
         $n++;
     }
     if($n < 4){
-        $fee = 1234;
+        $fee = 0;
         foreach ($name as $board){ 
             $boardgameborrowed = $board;
             $stmt->execute();
             $sql->execute();
 
-            $sqlquery = "SELECT * FROM BoardGames WHERE title=".$board."' ";
+            $sqlquery = "SELECT * FROM BoardGames WHERE title='".$board."' ";
             $result = mysqli_query($conn, $sqlquery);
             $row = mysqli_fetch_array($result);
 
