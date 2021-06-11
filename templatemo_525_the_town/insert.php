@@ -21,15 +21,16 @@
     $studentId = $_GET['stdid'];
     $name = $_GET['checked'];
     $phone = $_GET['phonenumber'];
-    echo "OK";
+    echo "OK1";
     $sql = $conn->prepare("UPDATE reservation SET status = ? WHERE title =?");
     $sql->bind_param("Ss",$reserve ,$nofboard);
     $n = 0;
+    echo "OK2";
     $reserve = "reserved";
     foreach ($name as $board){ 
         $n++;
     }
-    
+    echo "OK3";
     if($n < 4){
         foreach ($name as $board){ 
             $boardgameborrowed = $board;
