@@ -21,11 +21,16 @@
     $studentId = $_GET['stdid'];
     $name = $_GET['checked'];
 
+    $n = 0;
     foreach ($name as $board){ 
-        $boardgameborrowed = $board;
-        $stmt->execute();
+        $n++;
     }
-
+    if($n > 4){
+        foreach ($name as $board){ 
+            $boardgameborrowed = $board;
+            $stmt->execute();
+        }
+    }
 
 ?>
 <!DOCTYPE html>
@@ -94,17 +99,22 @@
                     <h2 class="tm-text-primary tm-section-title mb-4"><strong>renting rules </strong></h2>
                     <p class="mx-auto tm-work-description">
                     </br>
-                    insertion is succesfully done.
+                    
                     <?php
-
-                    $name = $_GET['checked'];
-                    
-                    foreach ($name as $color){ 
-                        echo $color."<br />";
-                    }
-                    
-                    
+                        if($n > 3){
+                            echo "reservation is succesfully done.";
+                            $name = $_GET['checked'];
+                            
+                            foreach ($name as $color){ 
+                                echo $color."<br />";
+                            }
+                        }
+                        else{
+                            echo "<p>reservation is failed</p>";
+                            echo "<p>please don't choose more than three boardgames.</p>";
+                        }
                     ?>
+
                     </br>
                     </br>
                     </form>

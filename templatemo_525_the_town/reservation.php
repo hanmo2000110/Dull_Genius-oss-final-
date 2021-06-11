@@ -67,7 +67,8 @@
                         <strong>2. Each board game has a different rental fee. Take a closer look.</br> </strong>
                         <strong>3. If the board game is broken, the borrower should compensate.</br> </strong>
                         <strong>4. You can pay the rental fee when you come to pick up the board game.</br> </strong>
-                        <strong>5. Enjoy the game.</br> </strong>
+                        <strong>5. You have to return the boardgames at least in three days.</br> </strong>
+                        <strong>6. Enjoy the game.</br> </strong>
                     </p>
                     </br>
                     <style>
