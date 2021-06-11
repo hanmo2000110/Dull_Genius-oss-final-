@@ -17,9 +17,9 @@ $stmt = $conn->prepare("INSERT INTO reservation (borrower, studentId, boardgameb
 $stmt->bind_param("sss", $borrower, $studentId, $boardgameborrowed);
  
 // set parameters and execute
-$borrower = $_GET['borrower'];
-$studentId = $_GET['studentId'];
-$boardgameborrowed = $_GET['studentId'];
+$borrower = $_GET['name_of_borrower'];
+$studentId = $_GET['stdid'];
+$boardgameborrowed = $_GET['stdid'];
 $stmt->execute();
 echo $_GET['borrower'];
 
