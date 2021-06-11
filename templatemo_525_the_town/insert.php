@@ -26,7 +26,7 @@
     foreach ($name as $board){ 
         $n++;
     }
-    if($n > 4){
+    if($n < 4){
         foreach ($name as $board){ 
             $boardgameborrowed = $board;
             $stmt->execute();
