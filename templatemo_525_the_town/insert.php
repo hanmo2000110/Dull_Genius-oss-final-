@@ -32,7 +32,7 @@
         foreach ($name as $board){ 
             $boardgameborrowed = $board;
             $stmt->execute();
-            mysqli_query($conn, "UPDATE reservation SET status = reserved WHERE title = '".$board."'");
+            mysqli_query($conn, "UPDATE reservation SET status = reserved WHERE title = ".$boardgameborrowed);
 
         }
     }
