@@ -111,7 +111,7 @@
                             $i = 1;
                             while( $row = mysqli_fetch_array($result) ){
                                 echo '<tr>';
-                                echo '<td><input type="checkbox" name="checked" value="$i"></th>';
+                                echo '<td><input type="checkbox" name="checked" value="'.$row['title'].'"></th>';
                                 echo '<td>'.$i.'</th>';
                                 echo '<td>'.$row['title'].'</td>';
                                 echo '<td>'.$row['num_of_players'].'</td>';
