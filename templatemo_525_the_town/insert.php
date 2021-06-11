@@ -106,8 +106,8 @@
                             echo "<p class=\"mx-auto tm-work-description\">";
                             echo "</br>";
                             $name = $_GET['checked'];
-                            echo "Name : ".$_GET['name_of_borrower'];
-                            echo "Student ID : ".$_GET['stdid'];
+                            echo "Name : ".$_GET['name_of_borrower']."<br>";
+                            echo "Student ID : ".$_GET['stdid']."<br>";
                             $num = 1;
                             foreach ($name as $board){ 
                                 echo $num.". ".$board."<br />";
