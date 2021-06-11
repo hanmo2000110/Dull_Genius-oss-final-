@@ -200,37 +200,37 @@
     <script src="js/jquery.singlePageNav.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-        function test() {
-            var obj_length = document.getElementsByName("checked").length;
-            var n = 0;
-            for (var i=0; i<obj_length; i++) {
-                if (document.getElementsByName("checked")[i].checked == true) {
-                    n++;
-                }
-            }
-            if(n > 3) alert("Please choose less than 3 board games");
-            else {
-            for (var i=1; i<=obj_length; i++) {
-                if (document.getElementsByName("checked")[i-1].checked == true) {
-                    <?php
-                        $mysqli = new mysqli("localhost", "admin", "Name0413", "Dull_Genius");
-                        $sql = "SELECT * FROM BoardGames WHERE id=$i";
-                        $result = $mysqli->query($sql);
-                        $row = mysqli_fetch_array($result);
+        // function test() {
+        //     var obj_length = document.getElementsByName("checked").length;
+        //     var n = 0;
+        //     for (var i=0; i<obj_length; i++) {
+        //         if (document.getElementsByName("checked")[i].checked == true) {
+        //             n++;
+        //         }
+        //     }
+        //     if(n > 3) alert("Please choose less than 3 board games");
+        //     else {
+        //     for (var i=1; i<=obj_length; i++) {
+        //         if (document.getElementsByName("checked")[i-1].checked == true) {
+        //          
+        //                 $mysqli = new mysqli("localhost", "admin", "Name0413", "Dull_Genius");
+        //                 $sql = "SELECT * FROM BoardGames WHERE id=$i";
+        //                 $result = $mysqli->query($sql);
+        //                 $row = mysqli_fetch_array($result);
                         
-                        $stmt = $mysqli->prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES(?,?,?, NOW() )"); 
-                        $stmt.bind_param("sss", $borrower, $studentId, $title);
-                        $borrower = "borrower";
-                        $studentId = "studentId";
-                        $title = $row['title'];
-                        $stmt->execute();
-                    ?>
+        //                 $stmt = $mysqli->prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES(?,?,?, NOW() )"); 
+        //                 $stmt.bind_param("sss", $borrower, $studentId, $title);
+        //                 $borrower = "borrower";
+        //                 $studentId = "studentId";
+        //                 $title = $row['title'];
+        //                 $stmt->execute();
+        //             ?>
                     
-                }
-            }
-            location.reload();
-            }
-        }
+        //         }
+        //     }
+        //     location.reload();
+        //     }
+        // }
         function getOffSet() {
             var _offset = 450;
             var windowHeight = window.innerHeight;
