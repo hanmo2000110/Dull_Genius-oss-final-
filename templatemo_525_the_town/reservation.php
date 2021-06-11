@@ -128,10 +128,11 @@
                             
                         ?>
                         <p>
-                            Name: <input type="text" name="name_of_borrower" size=40 placeholder="Enter your name here">
+                            Name        : <input type="text" name="name_of_borrower" size=40 placeholder="Enter your name here">
                             <br>
-                            </br>
-                            Student ID: <input type=text name=stdid size=40 placeholder="Enter your student ID here">
+                            <br>
+                            Student ID  : <input type=text name=stdid size=40 placeholder="Enter your student ID here">
+                            <br>
                             <br>
                             Phone Number: <input type=text name=phonenumber size=40 placeholder="Enter your phone number here">
                             <br>
