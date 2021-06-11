@@ -101,7 +101,7 @@
                     </br>
                     
                     <?php
-                        if($n > 3){
+                        if($n < 4){
                             echo "reservation is succesfully done.";
                             $name = $_GET['checked'];
                             
@@ -109,7 +109,7 @@
                                 echo $color."<br />";
                             }
                         }
-                        else{
+                        else { 
                             echo "<p>reservation is failed</p>";
                             echo "<p>please don't choose more than three boardgames.</p>";
                         }
