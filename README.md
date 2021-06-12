@@ -57,6 +57,6 @@ If you have any question about the project, please feel free to contact me throu
 
 ## Contributing Guidelines
 
-for any bugs of new features, You can use Pull requests.
+for any bugs or new features, You can use Pull requests.
 
 I suggest you to develop the design of the website
