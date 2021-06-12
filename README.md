@@ -1,6 +1,6 @@
 # 22000120 Shin Kim Final Project.
 
-## 1. What does this project do?
+## What does this project do?
 
 The Project Name : **Dull_Genius** 
 
@@ -24,7 +24,7 @@ And it offers board game renting services
 
 css template used in the project: [link](https://www.free-css.com/free-css-templates/page259/the-town)
 
-## 2. Why is this project useful?
+## Why is this project useful?
 
 The club has various board games. But board games are left unattended when there are no club meetings.
 
@@ -35,25 +35,27 @@ The club has various board games. But board games are left unattended when there
 - 3. to increase club's recognition.
 - 4. Fulfills people's need to enjoy board games.
 
-## 3. How do I get started?
+## How do I get started?
 
 1. Turn on your RaspberryPi
 2. Make a directory under RaspberryPi's local directory
 3. Clone https://github.com/hanmo2000110/Dull_Genius-oss-final-.git
 4. Move or replace the files to /var/www/html
 5. You should install Apache, PHP, and MySQL
-6. check **boardgamelist.txt** file. in the file you could find 
+6. check **boardgamelist.txt** file. in the file you could find some commands use them all.
   * mysql command for creating board game list 
   * mysql command for creating reservation list
   * mysql commands to add boardgames in the BoardGames table.
-  use them all
 7. run apache and configure mysql.
 8. Go to http://raspberrypi.local/
 9. finished to get started. 
 
-## 4. Where can I get more help, if I need it?
+## Where can I get more help, if I need it?
 
 If you have any question about the project, please feel free to contact me through => 22000120@handong.edu
 
+## Contributing Guidelines
 
+for any bugs of new features, You can use Pull requests.
 
+I suggest you develop the design of the website
