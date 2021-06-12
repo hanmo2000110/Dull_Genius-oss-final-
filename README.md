@@ -58,4 +58,4 @@ If you have any question about the project, please feel free to contact me throu
 
 for any bugs of new features, You can use Pull requests.
 
-I suggest you develop the design of the website
+I suggest you to develop the design of the website
