@@ -4,7 +4,7 @@
 
 The Project Name : **Dull_Genius** 
 
-made by using raspberryPi for final project of **Open Soure Software Lab** 
+made for final project of **Open Soure Software Lab** 
 
 Presentation Video Link => [YOUTUBE LINK](https://naver.com "click the link to watch presentation video")
 
@@ -14,11 +14,12 @@ This project introduce **Dull_Genius** club which is a board game club in Handon
 
 And it offers board game renting services
 
-### In this project LAMP is used:
+### In this project LAMP and raspberryPi are used:
 **L**inux
 **A**pache
 **M**ysql
 **P**hp
+**RaspBerryPi**
 
 ### resources used :
 
