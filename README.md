@@ -2,11 +2,16 @@
 
 ## 1. What does this project do?
 
-The Project Name : Dull_Genius 
+The Project Name : **Dull_Genius **
 
-This project introduce Dull_Genius club which is a board game club in Handong global university.
+This project introduce **Dull_Genius** club which is a board game club in Handong global university.
 
 And it offers board game renting services
+
+
+
+
+[YOUTUBE LINK](https://naver.com "click the link to watch presentation video")
 
 ## 2. Why is this project useful?
 
@@ -14,10 +19,10 @@ The club has various board games. But board games are left unattended when there
 
 ### this website is made to solve the following problems :
 
-1. To eliminate the waste of unused board games.
-2. To help the club finance through the rental business.
-3. to increase club's recognition.
-4. Fulfills people's need to enjoy board games.
+- 1. To eliminate the waste of unused board games.
+- 2. To help the club finance through the rental business.
+- 3. to increase club's recognition.
+- 4. Fulfills people's need to enjoy board games.
 
 ## 3. How do I get started?
 
@@ -28,4 +33,4 @@ The club has various board games. But board games are left unattended when there
 
 
 
-https://www.free-css.com/free-css-templates/page259/the-town
+css template used in the project: [link](https://www.free-css.com/free-css-templates/page259/the-town)
