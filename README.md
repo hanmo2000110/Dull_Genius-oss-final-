@@ -6,7 +6,7 @@ The Project Name : **Dull_Genius**
 
 made for final project of **Open Soure Software Lab** 
 
-Presentation Video Link => [YOUTUBE LINK](https://youtu.be/lJB57-WL54I"click the link to watch presentation video")
+Presentation Video Link => [YOUTUBE LINK]("https://youtu.be/lJB57-WL54I"click the link to watch presentation video")
 
 ### concept of the project
 
