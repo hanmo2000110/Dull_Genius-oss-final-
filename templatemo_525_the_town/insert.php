@@ -15,8 +15,8 @@
     // prepare and bind
     $stmt = $conn->prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, PhoneNumber, reservationAt) VALUES (?, ?, ?, ?, NOW() )");
     $stmt->bind_param("ssss", $borrower, $studentId, $boardgameborrowed, $phone);
-    $sql = $conn->prepare("UPDATE BoardGames SET status = 'reserved' WHERE title =?");
-    $sql->bind_param("s",$boardgameborrowed);
+    $sql = $conn->prepare("UPDATE BoardGames SET status = 'reserved', borrower = ? WHERE title =?");
+    $sql->bind_param("ss",$borrower,$boardgameborrowed);
 
     
 
