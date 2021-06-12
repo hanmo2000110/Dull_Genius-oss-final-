@@ -132,13 +132,13 @@
                             
                         ?>
                         <p>
-                            Name : <input type="text" name="name_of_borrower" size=40 value="Enter your name here">
+                            Name : <input type="text" name="name_of_borrower" size=40 value="Enter your name here" required maxlength=20>
                             <br>
                             <br>
-                            Student ID : <input type=text name=stdid size=40 value="Enter your student ID here">
+                            Student ID : <input type=text name=stdid size=40 value="Enter your student ID here" maxlength=8 required>
                             <br>
                             <br>
-                            Phone Number: <input type=text name=phonenumber size=40 value="Enter your phone number here">
+                            Phone Number: <input type=text name=phonenumber size=40 value="Enter your phone number here" required maxlength=13>
                             <br>
                         <p>
                         </br>
