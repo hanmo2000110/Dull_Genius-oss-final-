@@ -135,10 +135,10 @@
                             Name : <input type="text" name="name_of_borrower" size=40 placeholder="Enter your name here" required maxlength=20>
                             <br>
                             <br>
-                            Student ID : <input type=text name=stdid size=40 placeholder="Enter your student ID here" maxlength=8 required>
+                            Student ID : <input type=text name=stdid size=40 placeholder="Enter your student ID here" maxlength=8 required pattern="[0-9]+"> 
                             <br>
                             <br>
-                            Phone Number: <input type=text name=phonenumber size=40 placeholder="Enter your phone number here" required maxlength=13>
+                            Phone Number: <input type=text name=phonenumber size=40 placeholder="Enter your phone number here" required maxlength=13 pattern="[0-9]+">
                             <br>
                         <p>
                         </br>
