@@ -1,23 +1,31 @@
-this project is done in the OSS(open source software) course 
+# 22000120 Shin Kim Final Project.
 
-# oss2021-final-project-board-game-renting-service
-Dull genius is a board game club in Handong global university. 
+## 1. What does this project do?
 
-The club has various board games. But the games are just neglected When there's no club meeting.
+The Project Name : Dull_Genius 
+
+This project introduce Dull_Genius club which is a board game club in Handong global university.
+
+And it offers board game renting services
+
+## 2. Why is this project useful?
+
+The club has various board games. But board games are left unattended when there are no club meetings.
+
+### this website is made to solve the following problems :
+
+1. To eliminate the waste of unused board games.
+2. To help the club finance through the rental business.
+3. to increase club's recognition.
+4. Fulfills people's need to enjoy board games.
+
+## 3. How do I get started?
 
 
 
-## this website is made to solve the following problems.
-
-To eliminate the waste of unused board games.
-
-To help the club finance through the rental business.
-
-to increase club's recognition.
-
-Fulfills people's need to enjoy board games.
+## 4. Where can I get more help, if I need it?
 
 
-https://colorlib.com/wp/template/css-table-15/
+
 
 https://www.free-css.com/free-css-templates/page259/the-town
