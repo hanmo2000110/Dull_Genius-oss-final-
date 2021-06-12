@@ -2,16 +2,29 @@
 
 ## 1. What does this project do?
 
-The Project Name : **Dull_Genius **
+The Project Name : **Dull_Genius** 
+
+made by using raspberryPi for final project of **Open Soure Software Lab** 
+
+---
 
 This project introduce **Dull_Genius** club which is a board game club in Handong global university.
 
 And it offers board game renting services
 
+---
 
+### In this project LAMP is used:
+**L**inux
+**A**pache
+**M**ysql
+**P**hp
 
+---
 
-[YOUTUBE LINK](https://naver.com "click the link to watch presentation video")
+### resources used :
+
+* [YOUTUBE LINK](https://naver.com "click the link to watch presentation video")
 
 ## 2. Why is this project useful?
 
