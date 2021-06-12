@@ -63,7 +63,7 @@
                 <div class="text-center col-12">
                     <h2 class="tm-text-primary tm-section-title mb-4"><strong>renting rules </strong></h2>
                     <p class="mx-auto tm-work-description">
-                        <strong>1. One person can borrow up to three board games at a time.</br> </strong>
+                        <strong>1. Each person can borrow up to three board games at a time.</br> </strong>
                         <strong>2. Each board game has a different rental fee. Take a closer look.</br> </strong>
                         <strong>3. If the board game is broken, the borrower should compensate.</br> </strong>
                         <strong>4. You can pay the rental fee when you come to pick up the board game.</br> </strong>
@@ -208,37 +208,6 @@
     <script src="js/jquery.singlePageNav.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-        // function test() {
-        //     var obj_length = document.getElementsByName("checked").length;
-        //     var n = 0;
-        //     for (var i=0; i<obj_length; i++) {
-        //         if (document.getElementsByName("checked")[i].checked == true) {
-        //             n++;
-        //         }
-        //     }
-        //     if(n > 3) alert("Please choose less than 3 board games");
-        //     else {
-        //     for (var i=1; i<=obj_length; i++) {
-        //         if (document.getElementsByName("checked")[i-1].checked == true) {
-        //          
-        //                 $mysqli = new mysqli("localhost", "admin", "Name0413", "Dull_Genius");
-        //                 $sql = "SELECT * FROM BoardGames WHERE id=$i";
-        //                 $result = $mysqli->query($sql);
-        //                 $row = mysqli_fetch_array($result);
-                        
-        //                 $stmt = $mysqli->prepare("INSERT INTO reservation (borrower, studentId, boardgameborrowed, reservationAt) VALUES(?,?,?, NOW() )"); 
-        //                 $stmt.bind_param("sss", $borrower, $studentId, $title);
-        //                 $borrower = "borrower";
-        //                 $studentId = "studentId";
-        //                 $title = $row['title'];
-        //                 $stmt->execute();
-        //             ?>
-                    
-        //         }
-        //     }
-        //     location.reload();
-        //     }
-        // }
         function getOffSet() {
             var _offset = 450;
             var windowHeight = window.innerHeight;
